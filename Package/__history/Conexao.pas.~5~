@@ -1,0 +1,63 @@
+unit Conexao;
+
+interface
+
+uses
+  System.SysUtils, System.Classes, FireDAC.Stan.Intf, FireDAC.Stan.Option,
+  FireDAC.Stan.Error, FireDAC.UI.Intf, FireDAC.Phys.Intf, FireDAC.Stan.Def,
+  FireDAC.Stan.Pool, FireDAC.Stan.Async, FireDAC.Phys, FireDAC.Phys.MySQL,
+  FireDAC.Phys.MySQLDef, FireDAC.VCLUI.Wait, Data.DB, FireDAC.Comp.Client,
+  FireDAC.Phys.FB, FireDAC.Phys.FBDef, Vcl.Forms;
+
+type
+  TdmConexao = class(TDataModule)
+    FdConexao: TFDConnection;
+    procedure DataModuleCreate(Sender: TObject);
+  private
+    { Private declarations }
+    Database: string;
+    Username: string;
+    Senha: string;
+    Porta: string;
+    Protocol: string;
+    procedure LerIni;
+  public
+    { Public declarations }
+  end;
+
+var
+  dmConexao: TdmConexao;
+
+implementation
+
+{%CLASSGROUP 'Vcl.Controls.TControl'}
+
+{$R *.dfm}
+
+procedure TdmConexao.DataModuleCreate(Sender: TObject);
+begin
+  LerIni;
+end;
+
+procedure TdmConexao.LerIni;
+var
+  ArquivoIni: string;
+  stlArquivo: TStringList;
+begin
+  ArquivoIni := ExtractFilePath(Application.ExeName) + Copy(ExtractFileName(Application.ExeName), 1, 18) + 'ini';
+  stlArquivo := TStringList.Create;
+  try
+    stlArquivo.LoadFromFile(ArquivoIni);
+    Database := stlArquivo.Values['DATABASE'];
+    Username := stlArquivo.Values['USERNAME'];
+    Senha    := stlArquivo.Values['SENHA'];
+    Porta    := stlArquivo.Values['PORTA'];
+    Protocol := stlArquivo.Values['PROTOCOL']
+  finally
+    FreeAndNil(stlArquivo)
+  end;
+
+
+end;
+
+end.

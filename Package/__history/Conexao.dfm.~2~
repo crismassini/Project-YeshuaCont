@@ -1,0 +1,19 @@
+object dmConexao: TdmConexao
+  OldCreateOrder = False
+  Height = 281
+  Width = 379
+  object FdConexao: TFDConnection
+    Params.Strings = (
+      'DriverID=MySQL'
+      'Database=db_base'
+      'Password=massini'
+      'Server=127.0.0.1')
+    LoginPrompt = False
+    Left = 152
+    Top = 120
+  end
+  object FDPhysMySQLDriverLink1: TFDPhysMySQLDriverLink
+    Left = 56
+    Top = 152
+  end
+end

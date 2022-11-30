@@ -1,0 +1,17 @@
+program ControleContratos;
+
+uses
+  Vcl.Forms,
+  UInicial in '..\Forms\UInicial.pas' {frmUInicial},
+  CadastroBase in '..\Forms\CadastroBase.pas' {frmCadastroBase},
+  CadUsuario in '..\Forms\CadUsuario.pas' {frmCadastroBase1};
+
+{$R *.res}
+
+begin
+  Application.Initialize;
+  Application.MainFormOnTaskbar := True;
+  Application.CreateForm(TfrmUInicial, frmUInicial);
+  Application.CreateForm(TfrmCadastroBase1, frmCadastroBase1);
+  Application.Run;
+end.

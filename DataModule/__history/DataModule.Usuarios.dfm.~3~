@@ -1,0 +1,3 @@
+inherited dtmUsuarios: TdtmUsuarios
+  PixelsPerInch = 96
+end

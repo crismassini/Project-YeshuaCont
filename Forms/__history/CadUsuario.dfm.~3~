@@ -1,0 +1,25 @@
+inherited frmCadUsuario: TfrmCadUsuario
+  Caption = 'Cadastro de Usu'#225'rio'
+  PixelsPerInch = 96
+  TextHeight = 13
+  inherited StatusBar1: TStatusBar
+    ExplicitLeft = 0
+    ExplicitTop = 524
+    ExplicitWidth = 808
+  end
+  inherited pgcCadastro: TPageControl
+    inherited tbsPesquisa: TTabSheet
+      ExplicitLeft = 0
+      ExplicitTop = 0
+    end
+    inherited tbsCadastro: TTabSheet
+      ExplicitWidth = 800
+      ExplicitHeight = 496
+      inherited dbnCadastro: TDBNavigator
+        Hints.Strings = ()
+        ExplicitTop = 455
+        ExplicitWidth = 800
+      end
+    end
+  end
+end

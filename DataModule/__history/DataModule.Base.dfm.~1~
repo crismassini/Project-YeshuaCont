@@ -1,0 +1,10 @@
+object dtmUsuario: TdtmUsuario
+  Height = 205
+  Width = 361
+  PixelsPerInch = 96
+  object FDTable1: TFDTable
+    Connection = dmConexao.FdConexao
+    Left = 104
+    Top = 72
+  end
+end

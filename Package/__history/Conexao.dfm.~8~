@@ -1,0 +1,19 @@
+object dmConexao: TdmConexao
+  OnCreate = DataModuleCreate
+  Height = 281
+  Width = 379
+  PixelsPerInch = 96
+  object FdConexao: TFDConnection
+    Params.Strings = (
+      'Database=C:\CrisProject\YeshuaCont\Database\RETAG_BASE.FDB'
+      'Password=Xexa4ace@'
+      'CharacterSet=WIN1252'
+      'Port=3050'
+      'User_Name=SYSDBA'
+      'DriverID=FB')
+    Connected = True
+    LoginPrompt = False
+    Left = 152
+    Top = 120
+  end
+end

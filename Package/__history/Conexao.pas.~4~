@@ -1,0 +1,44 @@
+unit Conexao;
+
+interface
+
+uses
+  System.SysUtils, System.Classes, FireDAC.Stan.Intf, FireDAC.Stan.Option,
+  FireDAC.Stan.Error, FireDAC.UI.Intf, FireDAC.Phys.Intf, FireDAC.Stan.Def,
+  FireDAC.Stan.Pool, FireDAC.Stan.Async, FireDAC.Phys, FireDAC.Phys.MySQL,
+  FireDAC.Phys.MySQLDef, FireDAC.VCLUI.Wait, Data.DB, FireDAC.Comp.Client,
+  FireDAC.Phys.FB, FireDAC.Phys.FBDef, Vcl.Forms;
+
+type
+  TdmConexao = class(TDataModule)
+    FdConexao: TFDConnection;
+    procedure DataModuleCreate(Sender: TObject);
+  private
+    { Private declarations }
+    procedure LerIni;
+  public
+    { Public declarations }
+  end;
+
+var
+  dmConexao: TdmConexao;
+
+implementation
+
+{%CLASSGROUP 'Vcl.Controls.TControl'}
+
+{$R *.dfm}
+
+procedure TdmConexao.DataModuleCreate(Sender: TObject);
+begin
+  LerIni;
+end;
+
+procedure TdmConexao.LerIni;
+var
+  ArquivoIni: string;
+begin
+  ArquivoIni := ExtractFilePath(Application.ExeName) + Copy(Application.ExeName, 1, 18) + 'ini';
+end;
+
+end.

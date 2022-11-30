@@ -1,0 +1,162 @@
+object frmUInicial: TfrmUInicial
+  Left = 0
+  Top = 0
+  Caption = 'Controle de Documentos'
+  ClientHeight = 499
+  ClientWidth = 868
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  Menu = MainMenu1
+  OldCreateOrder = False
+  WindowState = wsMaximized
+  PixelsPerInch = 96
+  TextHeight = 13
+  object StatusBar1: TStatusBar
+    Left = 0
+    Top = 480
+    Width = 868
+    Height = 19
+    Panels = <>
+  end
+  object MainMenu1: TMainMenu
+    Left = 512
+    Top = 24
+    object Cadastros1: TMenuItem
+      Caption = 'Arquivo'
+      object Sair1: TMenuItem
+        Action = actSair
+      end
+    end
+    object Cadastros2: TMenuItem
+      Caption = 'Cadastros'
+      object Cliente1: TMenuItem
+        Action = actCadCliente
+      end
+      object Pessoa1: TMenuItem
+        Action = actCadPessoa
+      end
+      object N2: TMenuItem
+        Caption = '-'
+      end
+      object EstadoCivl1: TMenuItem
+        Action = actEstadoCivil
+      end
+      object Nacionalidade1: TMenuItem
+        Action = actCadNacionalidade
+      end
+      object Profisso1: TMenuItem
+        Action = actCadProfissao
+      end
+    end
+    object Documentols1: TMenuItem
+      Caption = 'Documentos'
+      object actCadAta1: TMenuItem
+        Action = actCadAta
+      end
+      object actCadEditalConvoc1: TMenuItem
+        Action = actCadEditalConvoc
+      end
+      object actCadListaPresen1: TMenuItem
+        Action = actCadListaPresen
+        Caption = '&Lista de Presen'#231'a'
+      end
+      object actCadTermoPosse1: TMenuItem
+        Action = actCadTermoPosse
+        Caption = '&Termo de Posse'
+      end
+      object actCadReqRegistro1: TMenuItem
+        Action = actCadReqRegistro
+        Caption = '&Requerimento de Registro'
+      end
+    end
+    object Configuraes1: TMenuItem
+      Caption = 'Configura'#231#245'es'
+      object ParmetrosdeSistema1: TMenuItem
+        Action = actParam
+      end
+      object Usurios1: TMenuItem
+        Action = actCadUsuario
+      end
+      object AlterarSenha1: TMenuItem
+        Action = actAlterarSenha
+      end
+      object N1: TMenuItem
+        Caption = '-'
+      end
+      object Sobre1: TMenuItem
+        Action = actSobre
+      end
+    end
+  end
+  object actMenuInicial: TActionList
+    Left = 568
+    Top = 32
+    object actSair: TAction
+      Category = 'Menu'
+      Caption = '&Sair'
+      OnExecute = actSairExecute
+    end
+    object actParam: TAction
+      Category = 'Menu'
+      Caption = 'Par'#226'metros de Sistema'
+    end
+    object actSobre: TAction
+      Category = 'Menu'
+      Caption = 'Sobre'
+      OnExecute = actSobreExecute
+    end
+    object actCadCliente: TAction
+      Category = 'Cadastros'
+      Caption = 'Clientes'
+    end
+    object actCadPessoa: TAction
+      Category = 'Cadastros'
+      Caption = 'Pessoas'
+    end
+    object actCadNacionalidade: TAction
+      Category = 'Cadastros'
+      Caption = 'Nacionalidade'
+    end
+    object actEstadoCivil: TAction
+      Category = 'Cadastros'
+      Caption = 'Estado Civ'#237'l'
+    end
+    object actCadProfissao: TAction
+      Category = 'Cadastros'
+      Caption = 'Profiss'#227'o'
+    end
+    object actCadAta: TAction
+      Category = 'Documentos'
+      Caption = 'Ata Assembl'#233'ia'
+    end
+    object actCadEditalConvoc: TAction
+      Category = 'Documentos'
+      Caption = 'Edital de Convoca'#231#227'o'
+    end
+    object actCadListaPresen: TAction
+      Category = 'Documentos'
+      Caption = 'actCadListaPresen'
+    end
+    object actCadReqRegistro: TAction
+      Category = 'Documentos'
+      Caption = 'actCadReqRegistro'
+    end
+    object actCadTermoPosse: TAction
+      Category = 'Documentos'
+      Caption = 'actCadTermoPosse'
+    end
+    object actAlterarSenha: TAction
+      Category = 'Menu'
+      Caption = 'Alterar Senha'
+    end
+    object actCadUsuario: TAction
+      Category = 'Cadastros'
+      Caption = 'Usu'#225'rios'
+      OnExecute = actCadUsuarioExecute
+    end
+  end
+end

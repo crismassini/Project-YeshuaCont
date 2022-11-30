@@ -1,0 +1,34 @@
+inherited dtmUsuarios: TdtmUsuarios
+  PixelsPerInch = 96
+  inherited FDTable1: TFDTable
+    Active = True
+    IndexFieldNames = 'CD_USUARIO'
+    TableName = 'USUARIOS'
+    object FDTable1CD_USUARIO: TIntegerField
+      FieldName = 'CD_USUARIO'
+      Origin = 'CD_USUARIO'
+      ProviderFlags = [pfInUpdate, pfInWhere, pfInKey]
+      Required = True
+    end
+    object FDTable1NOME: TStringField
+      FieldName = 'NOME'
+      Origin = 'NOME'
+      Size = 100
+    end
+    object FDTable1SENHA: TStringField
+      FieldName = 'SENHA'
+      Origin = 'SENHA'
+      Size = 30
+    end
+    object FDTable1CONFIRMASENHA: TStringField
+      FieldName = 'CONFIRMASENHA'
+      Origin = 'CONFIRMASENHA'
+      Size = 30
+    end
+    object FDTable1EMAIL: TStringField
+      FieldName = 'EMAIL'
+      Origin = 'EMAIL'
+      Size = 100
+    end
+  end
+end

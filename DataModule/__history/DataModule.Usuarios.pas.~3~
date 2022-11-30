@@ -1,0 +1,25 @@
+unit DataModule.Usuarios, Datamodule.Base;
+
+interface
+
+uses
+  System.SysUtils, System.Classes;
+
+type
+  TDataModule1 = class(TdtmBase)
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  DataModule1: TDataModule1;
+
+implementation
+
+{%CLASSGROUP 'Vcl.Controls.TControl'}
+
+{$R *.dfm}
+
+end.

@@ -1,0 +1,25 @@
+unit DataModule.Usuarios;
+
+interface
+
+uses
+  System.SysUtils, System.Classes;
+
+type
+  TdtmCadUsuario = class(TDataModule)
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  dtmCadUsuario: TdtmCadUsuario;
+
+implementation
+
+{%CLASSGROUP 'Vcl.Controls.TControl'}
+
+{$R *.dfm}
+
+end.

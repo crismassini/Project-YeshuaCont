@@ -1,0 +1,88 @@
+unit UInicial;
+
+interface
+
+uses
+  Winapi.Windows, Winapi.Messages, System.SysUtils, System.Variants, System.Classes, Vcl.Graphics,
+  Vcl.Controls, Vcl.Forms, Vcl.Dialogs, System.Actions, Vcl.ActnList, Vcl.Menus,
+  Vcl.ComCtrls;
+
+type
+  TfrmUInicial = class(TForm)
+    MainMenu1: TMainMenu;
+    Cadastros1: TMenuItem;
+    Configuraes1: TMenuItem;
+    Sair1: TMenuItem;
+    actMenuInicial: TActionList;
+    actSair: TAction;
+    actParam: TAction;
+    actSobre: TAction;
+    ParmetrosdeSistema1: TMenuItem;
+    Sobre1: TMenuItem;
+    Cadastros2: TMenuItem;
+    Documentols1: TMenuItem;
+    AlterarSenha1: TMenuItem;
+    N1: TMenuItem;
+    StatusBar1: TStatusBar;
+    actCadCliente: TAction;
+    actCadPessoa: TAction;
+    actCadNacionalidade: TAction;
+    actEstadoCivil: TAction;
+    actCadProfissao: TAction;
+    Cliente1: TMenuItem;
+    Pessoa1: TMenuItem;
+    N2: TMenuItem;
+    EstadoCivl1: TMenuItem;
+    Nacionalidade1: TMenuItem;
+    Profisso1: TMenuItem;
+    actCadAta: TAction;
+    actCadEditalConvoc: TAction;
+    actCadListaPresen: TAction;
+    actCadReqRegistro: TAction;
+    actCadTermoPosse: TAction;
+    actCadAta1: TMenuItem;
+    actCadEditalConvoc1: TMenuItem;
+    actCadListaPresen1: TMenuItem;
+    actCadTermoPosse1: TMenuItem;
+    actCadReqRegistro1: TMenuItem;
+    actAlterarSenha: TAction;
+    Usurios1: TMenuItem;
+    actCadUsuario: TAction;
+    procedure actSairExecute(Sender: TObject);
+    procedure actSobreExecute(Sender: TObject);
+    procedure actCadUsuarioExecute(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  frmUInicial: TfrmUInicial;
+
+implementation
+
+uses
+  CadUsuario;
+
+
+{$R *.dfm}
+
+procedure TfrmUInicial.actCadUsuarioExecute(Sender: TObject);
+begin
+  if Assigned(frmCadUsuario) then
+
+end;
+
+procedure TfrmUInicial.actSairExecute(Sender: TObject);
+begin
+  Close;
+end;
+
+procedure TfrmUInicial.actSobreExecute(Sender: TObject);
+begin
+  ShowMessage('Desenvolvido por Massini Solutions.'+#13+'Cel: (11) 94028-2406');
+end;
+
+
+end.

@@ -1,0 +1,51 @@
+object frmUInicial: TfrmUInicial
+  Left = 0
+  Top = 0
+  Caption = 'Controle de Documentos'
+  ClientHeight = 460
+  ClientWidth = 792
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  Menu = MainMenu1
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object MainMenu1: TMainMenu
+    Left = 392
+    Top = 232
+    object Cadastros1: TMenuItem
+      Caption = 'Arquivo'
+      object Sair1: TMenuItem
+        Action = actSair
+      end
+    end
+    object Configuraes1: TMenuItem
+      Caption = 'Configura'#231#245'es'
+      object ParmetrosdeSistema1: TMenuItem
+        Action = actParam
+      end
+      object Sobre1: TMenuItem
+        Action = actSobre
+      end
+    end
+  end
+  object actMenuInicial: TActionList
+    Left = 688
+    Top = 56
+    object actSair: TAction
+      Caption = '&Sair'
+      OnExecute = actSairExecute
+    end
+    object actParam: TAction
+      Caption = 'Par'#226'metros de Sistema'
+    end
+    object actSobre: TAction
+      Caption = 'Sobre'
+      OnExecute = actSobreExecute
+    end
+  end
+end
